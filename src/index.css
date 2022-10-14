@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Aktiv-Grotesk';
+  src: local('Aktiv-Grotesk'),
+    url(./assets/fonts/Aktiv-Grotesk-Light-Regular.OTF) format('opentype');
+}
+
+@font-face {
+  font-family: 'Aktiv-Grotesk';
+  src: local('Aktiv-Grotesk'),
+    url(./assets/fonts/Aktiv-Grotesk-Bold.OTF) format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'),
+    url(./assets/fonts/Merriweather-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: local('Merriweather'),
+    url(./assets/fonts/Merriweather-Bold.otf) format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-Variable.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-Variable.woff') format('woff'),
+    url('./assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./assets/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+    url('./assets/fonts/Satoshi-VariableItalic.woff') format('woff'),
+    url('./assets/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.inviscroll-x::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.noselection .ace_cursor {
+  color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  h1 {
+    @apply my-6 text-5xl leading-10 font-serif font-bold;
+  }
+
+  h2 {
+    @apply my-5 text-3xl leading-10 font-serif font-bold;
+  }
+
+  h3 {
+    @apply my-3 text-2xl leading-tight font-sans-serif font-bold;
+  }
+
+  h4 {
+    @apply my-3 text-2xl leading-tight font-serif font-bold;
+  }
+
+  h5 {
+    @apply my-2 font-sans-serif text-xl leading-normal font-bold;
+  }
+
+  h6 {
+    @apply my-2 font-sans-serif text-base leading-6;
+  }
+}
+@layer components {
+  .box-container {
+    @apply box-border flex flex-col font-light leading-tight font-sans-serif;
+  }
+
+  .text {
+    @apply font-light text-base leading-tight;
+  }
+
+  .btn {
+    @apply p-2 px-3 border font-bold border-solid rounded leading-tight focus:outline-none focus:shadow-inner text-base select-none cursor-pointer;
+  }
+
+  .input-sign-in {
+    @apply mb-3 p-3 w-full bg-gray-5 rounded-sm border border-transparent focus:border-gray-3 focus:outline-none focus:shadow-inner;
+  }
+
+  .btn-primary {
+    @apply btn text-white border-terracotta bg-terracotta hover:border-terracotta-hover hover:bg-terracotta-hover active:border-terracotta-active active:bg-terracotta-active disabled:border-gray-3 disabled:bg-gray-3;
+  }
+
+  .btn-secondary {
+    @apply btn text-terracotta hover:text-white active:text-white disabled:text-white border-terracotta hover:border-terracotta-hover active:border-terracotta-active disabled:border-gray-3 bg-transparent hover:bg-terracotta-hover active:bg-terracotta-active disabled:bg-gray-3;
+  }
+
+  .btn-tertiary {
+    @apply btn text-terracotta hover:text-terracotta active:text-terracotta disabled:text-white border-transparent hover:border-terracotta-tp-hover active:border-terracotta-tp-active disabled:border-gray-3 bg-transparent hover:bg-terracotta-tp-hover active:bg-terracotta-tp-active disabled:bg-gray-3;
+  }
+
+  .btn-large {
+    @apply border-2 text-xl leading-tight p-4;
+  }
+
+  .btn-medium {
+    @apply border text-base leading-tight p-3;
+  }
+
+  .btn-small {
+    @apply border text-xs leading-tight p-2;
+  }
+}
